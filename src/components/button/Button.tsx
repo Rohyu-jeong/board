@@ -1,6 +1,5 @@
 export type ButtonProps = {
   content: React.ReactNode;
-  color?: string;
   type?: "button" | "submit" | "reset";
   onClick?: () => void;
 };
@@ -8,14 +7,13 @@ export type ButtonProps = {
 // 버튼
 const Button = ({
   content,
-  color = "bg-slate-300",
   onClick,
   type = "button",
 }: ButtonProps) => {
   return (
     <button
       type={type}
-      className={`w-40 h-8 border border-black ${color} flex justify-center items-center`}
+      className="px-4 py-2 bg-[#444444] text-white rounded"
       onClick={onClick}
     >
       {content}

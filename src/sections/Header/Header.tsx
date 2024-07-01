@@ -1,26 +1,19 @@
-import { Link } from "react-router-dom";
-import { navDetail } from "../../util/navDetail";
-import Button from "../../components/button/Button";
+import Button, { ButtonProps } from "../../components/button/Button";
+
+type HeaderProps = {
+  headerText: ButtonProps;
+};
 
 // 헤더
 const Header = () => {
-  // 네비바 생성
-  const detailElments = navDetail.map((data: string, i: number) => {
-    return (
-      <Link key={i} to={`/${data}`}>
-        {data === "" ? <Button content="Main" /> : <Button content={data} />}
-      </Link>
-    );
-  });
+  const handleChange = () => {
+    // 로그인창으로 이동 및 마이페이지 이동 로직
+  };
 
   return (
-    <header className="w-screen h-[70px] border-b fixed z-[3] bg-white">
-      <nav className="w-full h-full max-w-[1300px] flex mx-auto justify-between items-center">
-        <div className="w-40 h-8 border border-black bg-slate-300 flex justify-center items-center">
-          userId
-        </div>
-        <div className="flex gap-8">{detailElments}</div>
-      </nav>
+    <header className="bg-[#444444] text-white p-4 flex justify-between w-screen fixed z-[3]">
+      <h1 className="text-2xl">닉네임's Blog</h1>
+      <Button content="닉네임" onClick={handleChange} />
     </header>
   );
 };

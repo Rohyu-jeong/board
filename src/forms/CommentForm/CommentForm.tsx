@@ -27,7 +27,7 @@ const CommentForm = () => {
         placeholder="댓글을 작성하세요"
         className="w-[70%] h-24 border outline-none"
       />
-      <Button content="댓글 작성" color="bg-red-300" />
+      <Button content="댓글 작성" />
     </form>
   );
 };

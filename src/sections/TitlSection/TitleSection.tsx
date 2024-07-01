@@ -24,7 +24,7 @@ const TitleSection = ({ title, userId, date }: TitleSectionProps) => {
 
   return (
     <div className="w-full flex flex-col gap-10 items-center">
-      <div className="w-full h-14 border flex justify-center items-center">
+      <div className="w-full h-14 border flex items-center bg-white">
         <span>{title}</span>
       </div>
       <div className="w-full flex justify-between items-center">
@@ -39,7 +39,6 @@ const TitleSection = ({ title, userId, date }: TitleSectionProps) => {
                 <FaHeart /> {likeCount}
               </>
             }
-            color="bg-red-300"
             onClick={handleLike}
           />
         </div>
