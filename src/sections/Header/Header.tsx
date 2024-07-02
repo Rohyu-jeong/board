@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <header className="bg-[#444444] text-white p-4 flex justify-between w-screen fixed z-[3]">
       <h1 className="text-2xl">닉네임's Blog</h1>
-      <Button content="닉네임" onClick={handleChange} />
+      <Button content="닉네임" onClick={handleChange} color="bg-[#444444]" />
     </header>
   );
 };

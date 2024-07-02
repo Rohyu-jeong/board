@@ -15,7 +15,7 @@ export const PostContentContainer = () => {
   useEffect(() => {
     const getPost = () => {
       getAllPosts()
-        .then(posts => {
+        .then((posts) => {
           // 'posts'가 배열인지 확인
           if (Array.isArray(posts)) {
             // 'id'에 해당하는 게시물을 찾아 'post' 상태에 설정
@@ -28,11 +28,11 @@ export const PostContentContainer = () => {
             console.error("Posts 데이터가 배열이 아닙니다:", posts);
           }
         })
-        .catch(error => {
+        .catch((error) => {
           console.error("오류 발생: ", error);
         });
     };
-  
+
     getPost();
   }, [id]);
 

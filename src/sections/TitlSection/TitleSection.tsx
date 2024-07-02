@@ -23,8 +23,8 @@ const TitleSection = ({ title, userId, date }: TitleSectionProps) => {
   };
 
   return (
-    <div className="w-full flex flex-col gap-10 items-center">
-      <div className="w-full h-14 border flex items-center bg-white">
+    <div className="w-full flex flex-col gap-5 items-center pt-10 md:pt-16 lg:pt-12">
+      <div className="w-full p-4 rounded-md flex items-center bg-white shadow-md">
         <span>{title}</span>
       </div>
       <div className="w-full flex justify-between items-center">
@@ -32,7 +32,7 @@ const TitleSection = ({ title, userId, date }: TitleSectionProps) => {
           <InfoCard content={userId} />
           <InfoCard content={date} />
         </div>
-        <div className="bg-red-300">
+        <div>
           <Button
             content={
               <>
@@ -40,6 +40,7 @@ const TitleSection = ({ title, userId, date }: TitleSectionProps) => {
               </>
             }
             onClick={handleLike}
+            className="shadow-md"
           />
         </div>
       </div>
